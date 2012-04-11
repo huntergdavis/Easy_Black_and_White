@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+
+	<com.google.ads.AdView android:id="@+id/adView"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"
+		android:layout_alignParentTop="true" ads:adUnitId="a14e1b24524a6b8"
+		ads:adSize="BANNER" ads:loadAdOnCreate="false" />
+
+	<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+		android:id="@+id/scroll" android:layout_width="fill_parent"
+		android:layout_height="wrap_content">
+
+		<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			android:orientation="vertical" android:layout_width="fill_parent"
+			android:layout_height="fill_parent">
+			<TableRow android:orientation="horizontal"
+				android:layout_width="fill_parent" android:layout_height="wrap_content"
+				android:id="@+id/tableButtonsRow" android:layout_alignParentTop="true"
+				android:visibility="visible" android:layout_gravity="fill_horizontal|bottom">
+				<Button android:text="Load Image" android:id="@+id/loadButton"
+					android:layout_width="fill_parent" android:layout_height="wrap_content"
+					android:layout_weight="1" />
+				<Button android:text="Save Image" android:id="@+id/saveButton"
+					android:layout_width="fill_parent" android:layout_height="wrap_content"
+					android:layout_weight="1" />
+			</TableRow>
+			<TextView android:text="Black and White Threshold"
+				android:id="@+id/thresholdtext" android:layout_width="fill_parent"
+				android:layout_height="wrap_content"></TextView>
+
+			<SeekBar android:id="@+id/threshold" android:layout_width="fill_parent"
+				android:layout_height="wrap_content" android:max="100"
+				android:progress="50" />
+			<TextView android:text="Click on Either Color to Select New"
+				android:id="@+id/thresholdtext" android:layout_width="fill_parent"
+				android:layout_height="wrap_content"></TextView>
+
+			<TableRow android:orientation="horizontal"
+				android:layout_width="fill_parent" android:layout_height="wrap_content"
+				android:id="@+id/tableRowText" android:visibility="visible"
+				android:layout_gravity="fill_horizontal|bottom">
+
+				<ImageView android:id="@+id/ColorImageOne"
+					android:layout_width="fill_parent" android:layout_height="wrap_content"
+					android:layout_weight="1" />
+
+				<ImageView android:id="@+id/ColorImageTwo"
+					android:layout_width="fill_parent" android:layout_height="wrap_content"
+					android:layout_weight="1" />
+			</TableRow>
+
+
+			<ImageView android:id="@+id/ImageView01" android:scaleType="fitStart"
+				android:layout_width="fill_parent" android:layout_height="wrap_content" />
+		</LinearLayout>
+	</ScrollView>
+
+</LinearLayout>
